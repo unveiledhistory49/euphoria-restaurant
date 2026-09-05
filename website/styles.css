@@ -67,12 +67,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 .hero-content h1{color:var(--pink)}
 
 /* Story */
-.story{background:var(--ivory);color:#222;padding:4.5rem 0}
+/* Light sections use Soft Ivory #F9F6F2 (spec 3, light content areas), never pure white */
+.story{background:#F9F6F2;color:#222;padding:4.5rem 0}
 .story h2{color:#1c1c1c}
 .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
-.story-art{position:relative;min-height:380px;display:flex;justify-content:center}
-.story-art svg{width:min(380px,90%);height:auto}
-.story-blossom{position:absolute;right:0;bottom:0;width:180px;height:120px;object-fit:cover;border:1px solid var(--brass);opacity:.9}
+.story-art{display:flex;align-items:center;justify-content:center}
+.story-art img{width:100%;height:auto}
 .text-link{color:var(--burgundy);letter-spacing:.18em;text-transform:uppercase;font-size:.75rem;text-decoration:none;border-bottom:1px solid transparent}
 .text-link:hover{border-bottom-color:var(--brass)}
 .text-link-gold{color:var(--brass)}
