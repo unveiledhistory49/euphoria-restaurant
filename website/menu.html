@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu | Euphoria Pool • Restaurant • Lounge</title>
+<meta name="description" content="Euphoria Ikoyi full menu: starters, mains, sushi, pizza, pasta, cocktails, wine and spirits, soft drinks, cigars and dessert.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="menu.css">
+<link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+<a class="skip-link" href="#menu-list">Skip to menu</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Euphoria home">
+      <img src="assets/logo.png" alt="Euphoria Pool Restaurant Lounge logo" width="120" height="72">
+      <span class="brand-text"><strong>EUPHORIA</strong><small>POOL • RESTAURANT • LOUNGE</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
+    <nav id="primary-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="index.html#pool">Pool</a>
+      <a href="index.html#restaurant">Restaurant</a>
+      <a href="index.html#lounge">Lounge</a>
+      <a href="menu.html" class="active" aria-current="page">Menu</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="index.html#reserve">Events</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="btn btn-outline" href="index.html#reserve">Reserve a Table</a>
+    </nav>
+  </div>
+</header>
+
+<main class="menu-page">
+  <div class="menu-hero">
+    <h1>Menu</h1>
+    <div class="rule rule-center" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+    <p class="menu-note">Transcribed from the printed boards. Prices in Naira.</p>
+  </div>
+
+  <div class="tabs" role="tablist" aria-label="Menu categories">
+    <button role="tab" data-tab="food" aria-selected="false">Food</button>
+    <button role="tab" data-tab="sushi" aria-selected="false">Sushi</button>
+    <button role="tab" data-tab="pizza-pasta" aria-selected="false">Pizza and Pasta</button>
+    <button role="tab" data-tab="cocktails" aria-selected="false">Cocktails</button>
+    <button role="tab" data-tab="wine-spirits" aria-selected="true" class="active">Wine and Spirits</button>
+    <button role="tab" data-tab="soft" aria-selected="false">Soft Drinks</button>
+    <button role="tab" data-tab="cigars" aria-selected="false">Cigars</button>
+    <button role="tab" data-tab="dessert" aria-selected="false">Dessert</button>
+  </div>
+
+  <div class="menu-tools">
+    <label class="tool-search">Search menu<input type="search" id="menu-search" placeholder="Try suya, salmon, gin..." autocomplete="off"></label>
+    <label class="tool-sort">Sort by
+      <select id="menu-sort">
+        <option value="menu">Menu order</option>
+        <option value="low">Price: low to high</option>
+        <option value="high">Price: high to low</option>
+      </select>
+    </label>
+  </div>
+  <p class="menu-count" id="menu-count" role="status" aria-live="polite"></p>
+
+  <div id="menu-list">
+    <!-- WINE & SPIRITS (default visible, mirrors menu.png mockup) -->
+    <section class="menu-card" data-cat="wine-spirits" aria-label="Wine and spirits">
+      <h2><span aria-hidden="true">✦</span> Irish Cream <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Baileys Bottle</span><span class="dots" aria-hidden="true"></span><span class="price">N86,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Vodka <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Titos Vodka</span><span class="dots" aria-hidden="true"></span><span class="price">N92,000</span></li>
+        <li><span class="item">Titos Vodka (Glass)</span><span class="dots" aria-hidden="true"></span><span class="price">N8,000</span></li>
+        <li><span class="item">Belvedere Forest</span><span class="dots" aria-hidden="true"></span><span class="price">N380,000</span></li>
+        <li><span class="item">Beluga Gold Line</span><span class="dots" aria-hidden="true"></span><span class="price">N190,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Gin <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Hendricks</span><span class="dots" aria-hidden="true"></span><span class="price">N190,000</span></li>
+        <li><span class="item">Tanqueray Number 10</span><span class="dots" aria-hidden="true"></span><span class="price">N140,000</span></li>
+        <li><span class="item">Drumshanbo</span><span class="dots" aria-hidden="true"></span><span class="price">N100,000</span></li>
+      </ul>
+    </section>
+
+    <section class="menu-card menu-card-green" data-cat="wine-spirits" aria-label="Wine">
+      <h2><span aria-hidden="true">✦</span> Wine <span aria-hidden="true">✦</span></h2>
+      <h3>Rose Wine</h3>
+      <ul>
+        <li><span class="item">Marques de Berol Semi Sweet 2018 Spain</span><span class="dots" aria-hidden="true"></span><span class="price">N50,000</span></li>
+        <li><span class="item">Angelus Rose</span><span class="dots" aria-hidden="true"></span><span class="price">N80,000</span></li>
+      </ul>
+      <h3>White Wine</h3>
+      <ul>
+        <li><span class="item">White Wine (Glass)</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+        <li><span class="item">Marques de Berol Macabeo Spain 2020</span><span class="dots" aria-hidden="true"></span><span class="price">N50,000</span></li>
+        <li><span class="item">Marques de Berol, Semi Sweet, Spain</span><span class="dots" aria-hidden="true"></span><span class="price">N50,000</span></li>
+        <li><span class="item">Phillipe Daynac Chardonnay 2018</span><span class="dots" aria-hidden="true"></span><span class="price">N75,000</span></li>
+        <li><span class="item">Carlo Rossi</span><span class="dots" aria-hidden="true"></span><span class="price">N50,000</span></li>
+        <li><span class="item">Sweet Kiss</span><span class="dots" aria-hidden="true"></span><span class="price">N50,000</span></li>
+        <li><span class="item">DC White</span><span class="dots" aria-hidden="true"></span><span class="price">N55,000</span></li>
+      </ul>
+      <h3>Red Wine</h3>
+      <ul>
+        <li><span class="item">Red Wine (Glass)</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+        <li><span class="item">Marques de Berol Gran Seleccion 2008</span><span class="dots" aria-hidden="true"></span><span class="price">N250,000</span></li>
+        <li><span class="item">Merlot Marques de Berol 2018</span><span class="dots" aria-hidden="true"></span><span class="price">N50,000</span></li>
+        <li><span class="item">Marques de Berol Cabernet Sauvignon 2018</span><span class="dots" aria-hidden="true"></span><span class="price">N50,000</span></li>
+        <li><span class="item">Syrah</span><span class="dots" aria-hidden="true"></span><span class="price">N60,000</span></li>
+        <li><span class="item">Larums Ribera Gold Bottle</span><span class="dots" aria-hidden="true"></span><span class="price">N250,000</span></li>
+        <li><span class="item">Winter Harvest 50cl</span><span class="dots" aria-hidden="true"></span><span class="price">N100,000</span></li>
+        <li><span class="item">Cabernet Sauvignon</span><span class="dots" aria-hidden="true"></span><span class="price">N50,000</span></li>
+        <li><span class="item">Carlo Rossi</span><span class="dots" aria-hidden="true"></span><span class="price">N50,000</span></li>
+        <li><span class="item">Chateauneuf-du-Pape</span><span class="dots" aria-hidden="true"></span><span class="price">N100,000</span></li>
+        <li><span class="item">KOP Shirah</span><span class="dots" aria-hidden="true"></span><span class="price">N60,000</span></li>
+        <li><span class="item">Sweet Kiss</span><span class="dots" aria-hidden="true"></span><span class="price">N50,000</span></li>
+        <li><span class="item">Whispering Angel</span><span class="dots" aria-hidden="true"></span><span class="price">N60,000</span></li>
+        <li><span class="item">Thomas Barton</span><span class="dots" aria-hidden="true"></span><span class="price">N55,000</span></li>
+        <li><span class="item">DC Red</span><span class="dots" aria-hidden="true"></span><span class="price">N55,000</span></li>
+        <li><span class="item">Escudo Rojo</span><span class="dots" aria-hidden="true"></span><span class="price">N55,000</span></li>
+      </ul>
+    </section>
+
+    <section class="menu-card" data-cat="wine-spirits" aria-label="Champagne and rose">
+      <h2><span aria-hidden="true">✦</span> Champagne <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Dom Perignon Brut</span><span class="dots" aria-hidden="true"></span><span class="price">N920,000</span></li>
+        <li><span class="item">Dom Perignon Luminous</span><span class="dots" aria-hidden="true"></span><span class="price">N920,000</span></li>
+        <li><span class="item">Ace of Spade Brut</span><span class="dots" aria-hidden="true"></span><span class="price">N1,400,000</span></li>
+        <li><span class="item">Cristal Brut</span><span class="dots" aria-hidden="true"></span><span class="price">N1,000,000</span></li>
+        <li><span class="item">Laurent Perrier Grand Siecle</span><span class="dots" aria-hidden="true"></span><span class="price">N895,000</span></li>
+        <li><span class="item">GH Mumm Cordon Rouge Demi-Sec</span><span class="dots" aria-hidden="true"></span><span class="price">N295,000</span></li>
+        <li><span class="item">Veuve Rich</span><span class="dots" aria-hidden="true"></span><span class="price">N420,000</span></li>
+        <li><span class="item">Moet Ice</span><span class="dots" aria-hidden="true"></span><span class="price">N290,000</span></li>
+        <li><span class="item">Laurent Perrier Demi-Sec</span><span class="dots" aria-hidden="true"></span><span class="price">N290,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Rose Vintage <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Laurent Perrier Rose</span><span class="dots" aria-hidden="true"></span><span class="price">N420,000</span></li>
+        <li><span class="item">Veuve Clicquot Rose</span><span class="dots" aria-hidden="true"></span><span class="price">N290,000</span></li>
+        <li><span class="item">Moet and Chandon Imperial Rose</span><span class="dots" aria-hidden="true"></span><span class="price">N290,000</span></li>
+        <li><span class="item">Cristal Rose</span><span class="dots" aria-hidden="true"></span><span class="price">N590,000</span></li>
+        <li><span class="item">Ace of Spade Rose</span><span class="dots" aria-hidden="true"></span><span class="price">N900,000</span></li>
+        <li><span class="item">Dom Perignon Rose</span><span class="dots" aria-hidden="true"></span><span class="price">N1,250,000</span></li>
+      </ul>
+    </section>
+
+    <section class="menu-card" data-cat="wine-spirits" aria-label="Whiskey Cognac Tequila Shots">
+      <h2><span aria-hidden="true">✦</span> Single Malt Whiskey <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Glenfiddich 30 Years</span><span class="dots" aria-hidden="true"></span><span class="price">N3,800,000</span></li>
+        <li><span class="item">Glenfiddich 26 Years</span><span class="dots" aria-hidden="true"></span><span class="price">N2,900,000</span></li>
+        <li><span class="item">Glenfiddich 23 Years</span><span class="dots" aria-hidden="true"></span><span class="price">N1,400,000</span></li>
+        <li><span class="item">Glenfiddich 21 Years</span><span class="dots" aria-hidden="true"></span><span class="price">N720,000</span></li>
+        <li><span class="item">Glenfiddich 18 Years</span><span class="dots" aria-hidden="true"></span><span class="price">N460,000</span></li>
+        <li><span class="item">Glenfiddich 15 Years</span><span class="dots" aria-hidden="true"></span><span class="price">N290,000</span></li>
+        <li><span class="item">Glenfiddich 16 Years</span><span class="dots" aria-hidden="true"></span><span class="price">N390,000</span></li>
+        <li><span class="item">Lagavulin 16 Years</span><span class="dots" aria-hidden="true"></span><span class="price">N490,000</span></li>
+        <li><span class="item">Laphroig 10 Years</span><span class="dots" aria-hidden="true"></span><span class="price">N490,000</span></li>
+        <li><span class="item">Maccalan 15 Years</span><span class="dots" aria-hidden="true"></span><span class="price">N720,000</span></li>
+        <li><span class="item">Maccalan Rare Cask</span><span class="dots" aria-hidden="true"></span><span class="price">N920,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Blended Whiskey <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Blue Label</span><span class="dots" aria-hidden="true"></span><span class="price">N620,000</span></li>
+        <li><span class="item">Chivas 25 Years</span><span class="dots" aria-hidden="true"></span><span class="price">N480,000</span></li>
+        <li><span class="item">Royal Salute 21 Years</span><span class="dots" aria-hidden="true"></span><span class="price">N220,000</span></li>
+        <li><span class="item">Chivas 18 Years</span><span class="dots" aria-hidden="true"></span><span class="price">N220,000</span></li>
+        <li><span class="item">Chivas 15 Years</span><span class="dots" aria-hidden="true"></span><span class="price">N200,000</span></li>
+        <li><span class="item">Gold Bar Whiskey</span><span class="dots" aria-hidden="true"></span><span class="price">N200,000</span></li>
+        <li><span class="item">Chivas 15 Years (Glass)</span><span class="dots" aria-hidden="true"></span><span class="price">N15,000</span></li>
+        <li><span class="item">Jameson Black Barrel</span><span class="dots" aria-hidden="true"></span><span class="price">N150,000</span></li>
+        <li><span class="item">Jameson (Shot)</span><span class="dots" aria-hidden="true"></span><span class="price">N6,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Cognac <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Martell XXO</span><span class="dots" aria-hidden="true"></span><span class="price">N1,600,000</span></li>
+        <li><span class="item">Hennessy XO</span><span class="dots" aria-hidden="true"></span><span class="price">N900,000</span></li>
+        <li><span class="item">Martell XO</span><span class="dots" aria-hidden="true"></span><span class="price">N900,000</span></li>
+        <li><span class="item">Hennessy VSOP</span><span class="dots" aria-hidden="true"></span><span class="price">N300,000</span></li>
+        <li><span class="item">Hennessy (Shot)</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Tequila <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Don Julio 1942</span><span class="dots" aria-hidden="true"></span><span class="price">N950,000</span></li>
+        <li><span class="item">Casamigos 75cL</span><span class="dots" aria-hidden="true"></span><span class="price">N350,000</span></li>
+        <li><span class="item">Azul Reposado</span><span class="dots" aria-hidden="true"></span><span class="price">N900,000</span></li>
+        <li><span class="item">Casa Maestri Reposado</span><span class="dots" aria-hidden="true"></span><span class="price">N400,000</span></li>
+        <li><span class="item">Aman Reposado</span><span class="dots" aria-hidden="true"></span><span class="price">N250,000</span></li>
+        <li><span class="item">Aman Blanco</span><span class="dots" aria-hidden="true"></span><span class="price">N230,000</span></li>
+        <li><span class="item">Aman Anejo</span><span class="dots" aria-hidden="true"></span><span class="price">N550,000</span></li>
+        <li><span class="item">Aman Anejo Cristalino</span><span class="dots" aria-hidden="true"></span><span class="price">N600,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Shots <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Tequila Gold shot</span><span class="dots" aria-hidden="true"></span><span class="price">N8,000</span></li>
+        <li><span class="item">Gin shot</span><span class="dots" aria-hidden="true"></span><span class="price">N8,000</span></li>
+        <li><span class="item">Tequila shot</span><span class="dots" aria-hidden="true"></span><span class="price">N6,000</span></li>
+        <li><span class="item">Whiskey shot</span><span class="dots" aria-hidden="true"></span><span class="price">N8,000</span></li>
+        <li><span class="item">Jameson Black Barrel</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+        <li><span class="item">Jameson Regular</span><span class="dots" aria-hidden="true"></span><span class="price">N8,000</span></li>
+        <li><span class="item">Ginger Tea</span><span class="dots" aria-hidden="true"></span><span class="price">N8,000</span></li>
+        <li><span class="item">Vodka</span><span class="dots" aria-hidden="true"></span><span class="price">N8,000</span></li>
+        <li><span class="item">Cream Job (Kahlua, Irish cream, whipped cream)</span><span class="dots" aria-hidden="true"></span><span class="price">N8,000</span></li>
+        <li><span class="item">B52 (Kahlua, Irish cream, Cointreau)</span><span class="dots" aria-hidden="true"></span><span class="price">N8,000</span></li>
+        <li><span class="item">Brain Damage (peach schnapps, Irish cream, cream)</span><span class="dots" aria-hidden="true"></span><span class="price">N8,000</span></li>
+        <li><span class="item">Tequila Slammers</span><span class="dots" aria-hidden="true"></span><span class="price">N8,000</span></li>
+        <li><span class="item">Sambuca</span><span class="dots" aria-hidden="true"></span><span class="price">N5,000</span></li>
+      </ul>
+    </section>
+
+    <!-- FOOD -->
+    <section class="menu-card" data-cat="food" hidden aria-label="Breakfast and starters">
+      <h2><span aria-hidden="true">✦</span> Choice of Breakfast <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">English Breakfast <small>Eggs, sausage, bacon, beans, mushrooms, tomato, toast</small></span><span class="dots" aria-hidden="true"></span><span class="price">N18k</span></li>
+        <li><span class="item">Nigerian Breakfast <small>Boiled yam and egg sauce</small></span><span class="dots" aria-hidden="true"></span><span class="price">N15k</span></li>
+        <li><span class="item">American Breakfast <small>Pancakes, scrambled eggs, sausages, syrup</small></span><span class="dots" aria-hidden="true"></span><span class="price">N18k</span></li>
+        <li><span class="item">Potato and Egg / Fish Sauce <small>Sweet potatoes, egg or fish sauce</small></span><span class="dots" aria-hidden="true"></span><span class="price">N15k</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Starters <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Peppered Snails <small>Fusion spices</small></span><span class="dots" aria-hidden="true"></span><span class="price">N22,000</span></li>
+        <li><span class="item">Traditional Tacos <small>Beef, chicken or shrimps</small></span><span class="dots" aria-hidden="true"></span><span class="price">N15,000</span></li>
+        <li><span class="item">Spicy Chicken Wings Lollipop <small>Chili sauce</small></span><span class="dots" aria-hidden="true"></span><span class="price">N15,000</span></li>
+        <li><span class="item">Tempura Chicken Lollypop <small>Eight pieces</small></span><span class="dots" aria-hidden="true"></span><span class="price">N20,000</span></li>
+        <li><span class="item">Tempura Prawns <small>Sweet chili sauce</small></span><span class="dots" aria-hidden="true"></span><span class="price">N25,000</span></li>
+        <li><span class="item">Honey Glazed Salmon Sliders</span><span class="dots" aria-hidden="true"></span><span class="price">N30,000</span></li>
+        <li><span class="item">Dynamite Shrimp</span><span class="dots" aria-hidden="true"></span><span class="price">N15,000</span></li>
+        <li><span class="item">Chicken Croquettes</span><span class="dots" aria-hidden="true"></span><span class="price">N15,000</span></li>
+        <li><span class="item">Afro-LeB Hummus <small>Asun, suya spice</small></span><span class="dots" aria-hidden="true"></span><span class="price">N15,000</span></li>
+        <li><span class="item">Grilled Spicy Calamari</span><span class="dots" aria-hidden="true"></span><span class="price">N25,000</span></li>
+        <li><span class="item">Taste of Euphoria <small>Starter platter with wine</small></span><span class="dots" aria-hidden="true"></span><span class="price">N35,000</span></li>
+        <li><span class="item">Euphoria Rolls <small>Mixed seafood</small></span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+        <li><span class="item">Smashed Burger Sliders <small>Three pieces</small></span><span class="dots" aria-hidden="true"></span><span class="price">N25,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Salads <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Euphoria Classic Salad</span><span class="dots" aria-hidden="true"></span><span class="price">N28,000</span></li>
+        <li><span class="item">Chicken Caesar Salad</span><span class="dots" aria-hidden="true"></span><span class="price">N20,000</span></li>
+        <li><span class="item">Cobb Salad</span><span class="dots" aria-hidden="true"></span><span class="price">N30,000</span></li>
+        <li><span class="item">Japanese Crab Salad</span><span class="dots" aria-hidden="true"></span><span class="price">N30,000</span></li>
+        <li><span class="item">Prawns Quinoa Bowl</span><span class="dots" aria-hidden="true"></span><span class="price">N28,000</span></li>
+        <li><span class="item">Steak Salad</span><span class="dots" aria-hidden="true"></span><span class="price">N28,000</span></li>
+      </ul>
+    </section>
+
+    <section class="menu-card menu-card-green" data-cat="food" hidden aria-label="Mains">
+      <h2><span aria-hidden="true">✦</span> Main Course <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Japanese Surf and Turf Teppanyaki</span><span class="dots" aria-hidden="true"></span><span class="price">N70,000</span></li>
+        <li><span class="item">Jamaican Jerk Grilled Chicken</span><span class="dots" aria-hidden="true"></span><span class="price">N30,000</span></li>
+        <li><span class="item">Citrus-Calibrated Seabass</span><span class="dots" aria-hidden="true"></span><span class="price">N65,000</span></li>
+        <li><span class="item">Ram Curry Sauce <small>Steamed rice, plantain</small></span><span class="dots" aria-hidden="true"></span><span class="price">N30,000</span></li>
+        <li><span class="item">Braised Lamb / Shank</span><span class="dots" aria-hidden="true"></span><span class="price">N56,000</span></li>
+        <li><span class="item">Spicy Roasted Chicken</span><span class="dots" aria-hidden="true"></span><span class="price">N28,000</span></li>
+        <li><span class="item">Grilled Lamb Chops</span><span class="dots" aria-hidden="true"></span><span class="price">N48,000</span></li>
+        <li><span class="item">Flame-Grilled Ribeye</span><span class="dots" aria-hidden="true"></span><span class="price">N58,000</span></li>
+        <li><span class="item">Grilled Tiger Prawns</span><span class="dots" aria-hidden="true"></span><span class="price">N45,000</span></li>
+        <li><span class="item">Baby Kingklip</span><span class="dots" aria-hidden="true"></span><span class="price">N60,000</span></li>
+        <li><span class="item">Imported Rump Steak</span><span class="dots" aria-hidden="true"></span><span class="price">N65,000</span></li>
+        <li><span class="item">Imported Sirloin Steak</span><span class="dots" aria-hidden="true"></span><span class="price">N45,000</span></li>
+        <li><span class="item">Lobster Thermidor</span><span class="dots" aria-hidden="true"></span><span class="price">N30,000</span></li>
+        <li><span class="item">Oxtail <small>Rice of choice</small></span><span class="dots" aria-hidden="true"></span><span class="price">N49,000</span></li>
+        <li><span class="item">Euphoria Beef Burger</span><span class="dots" aria-hidden="true"></span><span class="price">N21,000</span></li>
+        <li><span class="item">Pan Seared Grilled Salmon</span><span class="dots" aria-hidden="true"></span><span class="price">N65,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Catch of the Day <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Grilled Sea Bass</span><span class="dots" aria-hidden="true"></span><span class="price">N65,000</span></li>
+        <li><span class="item">Herb-Marinated Kinglip</span><span class="dots" aria-hidden="true"></span><span class="price">N65,000</span></li>
+        <li><span class="item">Grilled Red Snapper</span><span class="dots" aria-hidden="true"></span><span class="price">N45,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Signature Dishes <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Grilled Tomahawk (2 persons)</span><span class="dots" aria-hidden="true"></span><span class="price">N120,000</span></li>
+        <li><span class="item">Sirloin Wagyu</span><span class="dots" aria-hidden="true"></span><span class="price">N141,000</span></li>
+        <li><span class="item">Salt Bay</span><span class="dots" aria-hidden="true"></span><span class="price">N90,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Euphoria Tower <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Lucrezia Tower <small>Seafood</small></span><span class="dots" aria-hidden="true"></span><span class="price">N176,000</span></li>
+        <li><span class="item">Leonardo Tower <small>Suya, rolls, snails, sliders, tacos</small></span><span class="dots" aria-hidden="true"></span><span class="price">N98,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Sides <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Fried Plantain</span><span class="dots" aria-hidden="true"></span><span class="price">N6,000</span></li>
+        <li><span class="item">French Fries</span><span class="dots" aria-hidden="true"></span><span class="price">N6,000</span></li>
+        <li><span class="item">Euphoria Chips</span><span class="dots" aria-hidden="true"></span><span class="price">N6,000</span></li>
+        <li><span class="item">Sauteed Vegetables</span><span class="dots" aria-hidden="true"></span><span class="price">N6,000</span></li>
+        <li><span class="item">Fried Yam</span><span class="dots" aria-hidden="true"></span><span class="price">N6,000</span></li>
+        <li><span class="item">Fried Sweet Potato</span><span class="dots" aria-hidden="true"></span><span class="price">N6,000</span></li>
+        <li><span class="item">Jollof Rice</span><span class="dots" aria-hidden="true"></span><span class="price">N6,000</span></li>
+        <li><span class="item">Steamed Rice</span><span class="dots" aria-hidden="true"></span><span class="price">N6,000</span></li>
+        <li><span class="item">Euphoria Special Fried Rice</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+        <li><span class="item">Mashed Potatoes</span><span class="dots" aria-hidden="true"></span><span class="price">N6,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Taste of Africa <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Amala <small>Gbegiri, ewedu, assorted meats</small></span><span class="dots" aria-hidden="true"></span><span class="price">N18,500</span></li>
+        <li><span class="item">Efo Riro and Poundo</span><span class="dots" aria-hidden="true"></span><span class="price">N18,500</span></li>
+      </ul>
+    </section>
+
+    <!-- SUSHI -->
+    <section class="menu-card" data-cat="sushi" hidden aria-label="Sushi">
+      <h2><span aria-hidden="true">✦</span> Signature Sushi Rolls (4 pcs) <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Crunchy Roll</span><span class="dots" aria-hidden="true"></span><span class="price">N17,000</span></li>
+        <li><span class="item">Shrimp Dancing Roll</span><span class="dots" aria-hidden="true"></span><span class="price">N25,000</span></li>
+        <li><span class="item">Caterpillar Roll</span><span class="dots" aria-hidden="true"></span><span class="price">N21,000</span></li>
+        <li><span class="item">Shrimp Jalapeno Roll</span><span class="dots" aria-hidden="true"></span><span class="price">N17,000</span></li>
+        <li><span class="item">Crispy California Roll</span><span class="dots" aria-hidden="true"></span><span class="price">N20,000</span></li>
+        <li><span class="item">Crazy Crab Roll</span><span class="dots" aria-hidden="true"></span><span class="price">N17,000</span></li>
+        <li><span class="item">Salmon Mango Roll</span><span class="dots" aria-hidden="true"></span><span class="price">N20,000</span></li>
+        <li><span class="item">Dragon Roll</span><span class="dots" aria-hidden="true"></span><span class="price">N20,000</span></li>
+        <li><span class="item">Selfie Maki Roll</span><span class="dots" aria-hidden="true"></span><span class="price">N20,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Deep Fried Rolls (4 pcs) <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Deep Fried Chicken Roll</span><span class="dots" aria-hidden="true"></span><span class="price">N15,000</span></li>
+        <li><span class="item">Deep Fried Tuna Roll</span><span class="dots" aria-hidden="true"></span><span class="price">N25,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Salmon Selection (4 pcs) <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Smoked Salmon Roll</span><span class="dots" aria-hidden="true"></span><span class="price">N20,000</span></li>
+        <li><span class="item">Salmon Roll</span><span class="dots" aria-hidden="true"></span><span class="price">N18,000</span></li>
+        <li><span class="item">Spicy Salmon Roll</span><span class="dots" aria-hidden="true"></span><span class="price">N18,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Chef's Special and Vegetarian <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Silenzio Special Roll (4 pcs)</span><span class="dots" aria-hidden="true"></span><span class="price">N27,000</span></li>
+        <li><span class="item">Vegetarian Garden Roll (4 pcs)</span><span class="dots" aria-hidden="true"></span><span class="price">N18,000</span></li>
+        <li><span class="item">Avocado Hosomaki (6 pcs)</span><span class="dots" aria-hidden="true"></span><span class="price">N14,000</span></li>
+        <li><span class="item">Cucumber Hosomaki (6 pcs)</span><span class="dots" aria-hidden="true"></span><span class="price">N14,000</span></li>
+        <li><span class="item">Mango Hosomaki (6 pcs)</span><span class="dots" aria-hidden="true"></span><span class="price">N14,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Hosomaki (4 pcs) <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Salmon</span><span class="dots" aria-hidden="true"></span><span class="price">N20,000</span></li>
+        <li><span class="item">Tuna</span><span class="dots" aria-hidden="true"></span><span class="price">N25,000</span></li>
+        <li><span class="item">Salmon and Avocado</span><span class="dots" aria-hidden="true"></span><span class="price">N20,000</span></li>
+        <li><span class="item">Shrimp Tempura</span><span class="dots" aria-hidden="true"></span><span class="price">N20,000</span></li>
+        <li><span class="item">Kani (Crab)</span><span class="dots" aria-hidden="true"></span><span class="price">N18,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Sashimi (3 pieces) <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Salmon</span><span class="dots" aria-hidden="true"></span><span class="price">N14,000</span></li>
+        <li><span class="item">Tuna</span><span class="dots" aria-hidden="true"></span><span class="price">N17,000</span></li>
+        <li><span class="item">Ebi (Shrimp)</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+        <li><span class="item">Crab</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Nigiri (2 pieces) <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Salmon</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+        <li><span class="item">Tuna</span><span class="dots" aria-hidden="true"></span><span class="price">N14,000</span></li>
+        <li><span class="item">Ebi (Shrimp)</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+        <li><span class="item">Crab</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+      </ul>
+    </section>
+
+    <!-- PIZZA & PASTA -->
+    <section class="menu-card" data-cat="pizza-pasta" hidden aria-label="Pizza and pasta">
+      <h2><span aria-hidden="true">✦</span> Pizza <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Pepperoni</span><span class="dots" aria-hidden="true"></span><span class="price">N19,500</span></li>
+        <li><span class="item">Vegetarian</span><span class="dots" aria-hidden="true"></span><span class="price">N17,500</span></li>
+        <li><span class="item">Sardinia Pizza</span><span class="dots" aria-hidden="true"></span><span class="price">N22,000</span></li>
+        <li><span class="item">Margarita</span><span class="dots" aria-hidden="true"></span><span class="price">N17,000</span></li>
+        <li><span class="item">Suya <small>Beef and chicken suya</small></span><span class="dots" aria-hidden="true"></span><span class="price">N18,000</span></li>
+        <li><span class="item">Frutti di Mare Pizza</span><span class="dots" aria-hidden="true"></span><span class="price">N24,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Pasta <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Lasagna Asun</span><span class="dots" aria-hidden="true"></span><span class="price">N27,000</span></li>
+        <li><span class="item">Penne Arabiata Chicken / Prawns</span><span class="dots" aria-hidden="true"></span><span class="price">N26,000</span></li>
+        <li><span class="item">Pesto Pasta with Chicken / Prawns</span><span class="dots" aria-hidden="true"></span><span class="price">N28,000</span></li>
+        <li><span class="item">Chicken Alfredo</span><span class="dots" aria-hidden="true"></span><span class="price">N25,000</span></li>
+        <li><span class="item">Seafood Ofada / Linguini</span><span class="dots" aria-hidden="true"></span><span class="price">N32,000</span></li>
+        <li><span class="item">Spaghetti Mare</span><span class="dots" aria-hidden="true"></span><span class="price">N32,000</span></li>
+        <li><span class="item">Oxtail Pasta</span><span class="dots" aria-hidden="true"></span><span class="price">N55,000</span></li>
+      </ul>
+    </section>
+
+    <!-- COCKTAILS -->
+    <section class="menu-card" data-cat="cocktails" hidden aria-label="Cocktails">
+      <h2><span aria-hidden="true">✦</span> Classic Cocktails <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Long Island</span><span class="dots" aria-hidden="true"></span><span class="price">N15,000</span></li>
+        <li><span class="item">Mai Tai</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+        <li><span class="item">Aperol Spritz</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+        <li><span class="item">Margarita</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+        <li><span class="item">Daiquiri</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+        <li><span class="item">Mojito</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+        <li><span class="item">Pornstar Martini</span><span class="dots" aria-hidden="true"></span><span class="price">N15,000</span></li>
+        <li><span class="item">Negroni</span><span class="dots" aria-hidden="true"></span><span class="price">N15,000</span></li>
+        <li><span class="item">Gin Basil</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+        <li><span class="item">Old Fashion</span><span class="dots" aria-hidden="true"></span><span class="price">N13,000</span></li>
+        <li><span class="item">Whiskey Sour</span><span class="dots" aria-hidden="true"></span><span class="price">N15,000</span></li>
+        <li><span class="item">Caipirova</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+        <li><span class="item">Espresso Martini</span><span class="dots" aria-hidden="true"></span><span class="price">N15,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Signature Cocktails <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Blue Hawaii <small>Coconut, rum, pineapple, blue curacao</small></span><span class="dots" aria-hidden="true"></span><span class="price">N13,000</span></li>
+        <li><span class="item">Morphism Law <small>Ginger, gin, bitters</small></span><span class="dots" aria-hidden="true"></span><span class="price">N13,000</span></li>
+        <li><span class="item">Sidecar <small>Cognac, lemon</small></span><span class="dots" aria-hidden="true"></span><span class="price">N13,000</span></li>
+        <li><span class="item">PMS <small>Strawberry vodka, rosemary</small></span><span class="dots" aria-hidden="true"></span><span class="price">N13,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Mocktails <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Frozen Cherry and Coke</span><span class="dots" aria-hidden="true"></span><span class="price">N10,000</span></li>
+        <li><span class="item">Ginger Kiwi Zing</span><span class="dots" aria-hidden="true"></span><span class="price">N13,000</span></li>
+        <li><span class="item">Virgin Mojito (strawberry, mango, passion fruit)</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+        <li><span class="item">Virgin Daiquri</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Smoothies <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Banana Smoothie</span><span class="dots" aria-hidden="true"></span><span class="price">N10,000</span></li>
+        <li><span class="item">Mint Ginger Pineapple</span><span class="dots" aria-hidden="true"></span><span class="price">N10,000</span></li>
+        <li><span class="item">Watermelon, Ginger and Pineapple</span><span class="dots" aria-hidden="true"></span><span class="price">N10,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Milkshakes <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Vanilla</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+        <li><span class="item">Mango</span><span class="dots" aria-hidden="true"></span><span class="price">N15,000</span></li>
+        <li><span class="item">Hazelnut</span><span class="dots" aria-hidden="true"></span><span class="price">N15,000</span></li>
+        <li><span class="item">Chocolate</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+        <li><span class="item">Strawberry</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+        <li><span class="item">Banana</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+        <li><span class="item">Oreo Milkshake</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+        <li><span class="item">Cookies Jar Milkshake</span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+      </ul>
+    </section>
+
+    <!-- SOFT -->
+    <section class="menu-card" data-cat="soft" hidden aria-label="Soft drinks">
+      <h2><span aria-hidden="true">✦</span> Fresh Juices <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Fresh Orange Juice</span><span class="dots" aria-hidden="true"></span><span class="price">N10,000</span></li>
+        <li><span class="item">Fresh Apple Juice</span><span class="dots" aria-hidden="true"></span><span class="price">N10,000</span></li>
+        <li><span class="item">Fresh Pineapple Juice</span><span class="dots" aria-hidden="true"></span><span class="price">N10,000</span></li>
+        <li><span class="item">Fresh Beetroot Juice</span><span class="dots" aria-hidden="true"></span><span class="price">N10,000</span></li>
+        <li><span class="item">Fresh Carrot Juice</span><span class="dots" aria-hidden="true"></span><span class="price">N10,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Soft Drinks <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Water (Small)</span><span class="dots" aria-hidden="true"></span><span class="price">N2,500</span></li>
+        <li><span class="item">Sparkling Water</span><span class="dots" aria-hidden="true"></span><span class="price">N6,000</span></li>
+        <li><span class="item">Coke</span><span class="dots" aria-hidden="true"></span><span class="price">N3,000</span></li>
+        <li><span class="item">Sprite</span><span class="dots" aria-hidden="true"></span><span class="price">N3,000</span></li>
+        <li><span class="item">Fanta</span><span class="dots" aria-hidden="true"></span><span class="price">N3,000</span></li>
+        <li><span class="item">Soda Water</span><span class="dots" aria-hidden="true"></span><span class="price">N3,000</span></li>
+        <li><span class="item">Tonic Water</span><span class="dots" aria-hidden="true"></span><span class="price">N3,000</span></li>
+        <li><span class="item">Bitter Lemon</span><span class="dots" aria-hidden="true"></span><span class="price">N3,000</span></li>
+        <li><span class="item">Energy Drink</span><span class="dots" aria-hidden="true"></span><span class="price">N6,000</span></li>
+        <li><span class="item">Juices Pitcher</span><span class="dots" aria-hidden="true"></span><span class="price">N7,000</span></li>
+        <li><span class="item">Cranberry</span><span class="dots" aria-hidden="true"></span><span class="price">N10,000</span></li>
+      </ul>
+      <h2><span aria-hidden="true">✦</span> Hot Beverage <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Espresso</span><span class="dots" aria-hidden="true"></span><span class="price">N4,000</span></li>
+        <li><span class="item">Doubke Espresso</span><span class="dots" aria-hidden="true"></span><span class="price">N4,000</span></li>
+        <li><span class="item">Americano</span><span class="dots" aria-hidden="true"></span><span class="price">N4,000</span></li>
+      </ul>
+    </section>
+
+    <!-- CIGARS -->
+    <section class="menu-card" data-cat="cigars" hidden aria-label="Cigars">
+      <h2><span aria-hidden="true">✦</span> Cigars <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Handel Gold Cigarello <small>Mild, short smoke</small></span><span class="dots" aria-hidden="true"></span><span class="price">N6k</span></li>
+        <li><span class="item">Don Thomas <small>Honduras, medium</small></span><span class="dots" aria-hidden="true"></span><span class="price">N18k</span></li>
+        <li><span class="item">Don Thomas Allegro</span><span class="dots" aria-hidden="true"></span><span class="price">N30k</span></li>
+        <li><span class="item">Don Thomas Toros</span><span class="dots" aria-hidden="true"></span><span class="price">N15k</span></li>
+        <li><span class="item">Don Thomas XO</span><span class="dots" aria-hidden="true"></span><span class="price">N30k</span></li>
+        <li><span class="item">Macanudo <small>Dominican, mild</small></span><span class="dots" aria-hidden="true"></span><span class="price">N30k</span></li>
+        <li><span class="item">Macanudo Classic</span><span class="dots" aria-hidden="true"></span><span class="price">N30k</span></li>
+        <li><span class="item">Reposado Robusto</span><span class="dots" aria-hidden="true"></span><span class="price">N13k</span></li>
+        <li><span class="item">Reposado Toro</span><span class="dots" aria-hidden="true"></span><span class="price">N18k</span></li>
+        <li><span class="item">Reposado Churchill</span><span class="dots" aria-hidden="true"></span><span class="price">N18k</span></li>
+      </ul>
+    </section>
+
+    <!-- DESSERT -->
+    <section class="menu-card" data-cat="dessert" hidden aria-label="Dessert">
+      <h2><span aria-hidden="true">✦</span> Dessert <span aria-hidden="true">✦</span></h2>
+      <ul>
+        <li><span class="item">Dubai Cheesecake</span><span class="dots" aria-hidden="true"></span><span class="price">N15,000</span></li>
+        <li><span class="item">Lava Cake <small>Served with ice cream</small></span><span class="dots" aria-hidden="true"></span><span class="price">N12,000</span></li>
+        <li><span class="item">Poolside Fruit Boat</span><span class="dots" aria-hidden="true"></span><span class="price">N10,000</span></li>
+      </ul>
+    </section>
+
+    <p class="menu-note">No beer board was among the 43 images, so no Beer tab is shown. Ask the bar for the current beer list.</p>
+    <p class="menu-empty" id="menu-empty" hidden>No dishes match your search in this section. Try another word or category.</p>
+  </div>
+</main>
+
+<div class="reserve-bar">
+  <a class="btn btn-reserve" href="index.html#reserve">Reserve a Table <span aria-hidden="true">→</span></a>
+</div>
+
+<script>
+const toggle = document.querySelector('.nav-toggle');
+const nav = document.getElementById('primary-nav');
+toggle.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', String(open));
+});
+const tabs = Array.from(document.querySelectorAll('.tabs [role="tab"]'));
+const cards = Array.from(document.querySelectorAll('#menu-list .menu-card'));
+const searchInput = document.getElementById('menu-search');
+const sortSelect = document.getElementById('menu-sort');
+const countNote = document.getElementById('menu-count');
+const emptyNote = document.getElementById('menu-empty');
+let activeCat = 'wine-spirits';
+
+function priceValue(text) {
+  const m = String(text).replace(/,/g, '').match(/([\d.]+)\s*([kK]?)/);
+  if (!m) return NaN;
+  let v = parseFloat(m[1]);
+  if (m[2].toLowerCase() === 'k') v *= 1000;
+  return v;
+}
+
+cards.forEach(card => {
+  card.querySelectorAll('ul').forEach(ul => {
+    Array.from(ul.children).forEach((li, i) => {
+      li.dataset.index = String(i);
+      const p = li.querySelector('.price');
+      li.dataset.price = String(priceValue(p ? p.textContent : ''));
+    });
+  });
+});
+
+function applyFilters() {
+  const query = searchInput.value.trim().toLowerCase();
+  const mode = sortSelect.value;
+  let visible = 0;
+  cards.forEach(card => {
+    const active = card.dataset.cat === activeCat;
+    card.hidden = !active;
+    if (!active) return;
+    card.querySelectorAll('ul').forEach(ul => {
+      const items = Array.from(ul.children);
+      items.sort((a, b) => {
+        if (mode === 'low') return Number(a.dataset.price) - Number(b.dataset.price);
+        if (mode === 'high') return Number(b.dataset.price) - Number(a.dataset.price);
+        return Number(a.dataset.index) - Number(b.dataset.index);
+      });
+      items.forEach(li => ul.appendChild(li));
+      let shown = 0;
+      items.forEach(li => {
+        const name = li.querySelector('.item').textContent.toLowerCase();
+        const match = !query || name.includes(query);
+        li.style.display = match ? '' : 'none';
+        if (match) { shown++; visible++; }
+      });
+      ul.style.display = shown ? '' : 'none';
+    });
+    const kids = Array.from(card.children);
+    kids.forEach(el => {
+      if (el.tagName === 'H3') {
+        const next = el.nextElementSibling;
+        if (next && next.tagName === 'UL' && next.style.display === 'none') el.style.display = 'none';
+        else el.style.display = '';
+      }
+    });
+    kids.forEach(el => {
+      if (el.tagName === 'H2') {
+        let node = el.nextElementSibling;
+        let any = false;
+        while (node && node.tagName !== 'H2') {
+          if (node.tagName === 'UL' && node.style.display !== 'none') any = true;
+          node = node.nextElementSibling;
+        }
+        el.style.display = any ? '' : 'none';
+      }
+    });
+  });
+  const tabName = document.querySelector('.tabs [data-tab="' + activeCat + '"]').textContent;
+  countNote.textContent = query
+    ? visible + (visible === 1 ? ' match' : ' matches') + ' for "' + searchInput.value.trim() + '" in ' + tabName
+    : visible + ' dishes in ' + tabName;
+  emptyNote.hidden = visible !== 0;
+}
+tabs.forEach(t => t.addEventListener('click', () => {
+  activeCat = t.dataset.tab;
+  tabs.forEach(x => {
+    const on = x === t;
+    x.classList.toggle('active', on);
+    x.setAttribute('aria-selected', String(on));
+  });
+  applyFilters();
+}));
+searchInput.addEventListener('input', applyFilters);
+sortSelect.addEventListener('change', applyFilters);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') nav.classList.remove('open'); });
+applyFilters();
+</script>
+</body>
+</html>

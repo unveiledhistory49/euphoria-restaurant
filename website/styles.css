@@ -92,7 +92,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 .taste{background:var(--ivory);color:#222;padding:4rem 0}
 .taste h2{color:#1c1c1c}
 .taste-head{display:flex;justify-content:space-between;align-items:end;gap:1rem;flex-wrap:wrap}
-.soon{display:inline-block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;background:var(--blush);border:1px solid var(--brass);padding:.2rem .6rem;margin-left:.5rem;border-radius:20px;color:#5a2233}
 .dish-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:1.5rem}
 .dish-card{background:#fff;border:1px solid rgba(212,175,55,.55);padding:.7rem}
 .dish-card img{height:190px;width:100%;object-fit:cover}
