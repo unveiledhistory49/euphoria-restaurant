@@ -252,6 +252,20 @@ form.addEventListener('submit', (e) => {
   note.textContent = 'Thank you, ' + name + '. Request received for ' + guests + ' guests on ' + date + '. We will call ' + phone + ' to confirm.';
   form.reset();
 });
+let lastScrollY = window.scrollY;
+const narrowScreen = window.matchMedia('(max-width: 960px)');
+function onScrollBars() {
+  const y = window.scrollY;
+  if (!narrowScreen.matches || nav.classList.contains('open')) {
+    document.body.classList.remove('bars-hidden');
+  } else if (y <= 0 || y < lastScrollY - 4) {
+    document.body.classList.remove('bars-hidden');
+  } else if (y > lastScrollY + 4) {
+    document.body.classList.add('bars-hidden');
+  }
+  lastScrollY = y;
+}
+window.addEventListener('scroll', onScrollBars, { passive: true });
 </script>
 </body>
 </html>

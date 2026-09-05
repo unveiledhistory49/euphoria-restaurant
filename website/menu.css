@@ -9,6 +9,10 @@ rose-gold headings, dotted leaders, brass rules, emerald panel, sticky reserve. 
 .menu-tools input,.menu-tools select{background:#F9F6F2;border:1px solid #D4AF37;color:#111;padding:.8rem;min-height:44px;font-size:1rem;border-radius:2px;width:100%;letter-spacing:normal;text-transform:none}
 .menu-count{text-align:center;font-size:.85rem;color:#F5C6D0;min-height:1.5em}
 .menu-empty{text-align:center;border:1px dashed rgba(212,175,55,.6);padding:1.5rem 1rem;color:#F5C6D0}
+@media (max-width:960px){
+  .tabs-wrap{transition:transform .3s ease}
+  body.bars-hidden .tabs-wrap{transform:translateY(-130%)}
+}
 @media (min-width:480px){
   .menu-tools{grid-template-columns:1.4fr 1fr}
 }
