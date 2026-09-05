@@ -4,7 +4,6 @@ rose-gold headings, dotted leaders, brass rules, emerald panel, sticky reserve. 
 .menu-hero{text-align:center;padding:2.2rem 0 .6rem}
 .menu-hero h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:clamp(2.6rem,12vw,3.6rem);letter-spacing:.14em;color:#F5C6D0;margin:0;text-transform:uppercase}
 .rule-center{justify-content:center}
-.menu-note{text-align:center;font-size:.85rem;color:#E8A0B8;opacity:.9}
 .menu-tools{display:grid;grid-template-columns:1fr;gap:.7rem;margin-top:1rem}
 .menu-tools label{display:flex;flex-direction:column;gap:.35rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#E8A0B8}
 .menu-tools input,.menu-tools select{background:#F9F6F2;border:1px solid #D4AF37;color:#111;padding:.8rem;min-height:44px;font-size:1rem;border-radius:2px;width:100%;letter-spacing:normal;text-transform:none}
@@ -13,9 +12,14 @@ rose-gold headings, dotted leaders, brass rules, emerald panel, sticky reserve. 
 @media (min-width:480px){
   .menu-tools{grid-template-columns:1.4fr 1fr}
 }
-.tabs{display:flex;gap:1.1rem;overflow-x:auto;padding:.9rem .2rem 1rem;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
-.tabs [role="tab"]{flex:0 0 auto;background:none;border:none;color:#F9F6F2;font-family:"Jost",sans-serif;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;padding:.7rem .1rem;min-height:44px;cursor:pointer;border-bottom:2px solid transparent}
-.tabs [role="tab"].active{color:#E8A0B8;border-bottom-color:#E8A0B8}
+.tabs-wrap{position:sticky;top:67px;z-index:40;background:#0A0A0A;margin:0 -16px;padding:.6rem 16px .9rem;border-bottom:1px solid rgba(212,175,55,.35)}
+.tabs-label{margin:.2rem 0 .55rem;font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:#E8A0B8}
+.tabs{display:flex;gap:.6rem;overflow-x:auto;padding:.2rem .1rem .4rem;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.tabs [role="tab"]{flex:0 0 auto;background:rgba(232,160,184,.08);border:1px solid rgba(212,175,55,.6);border-radius:999px;color:#F9F6F2;font-family:"Jost",sans-serif;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;padding:.7rem 1.15rem;min-height:44px;cursor:pointer}
+.tabs [role="tab"].active{background:#E8A0B8;border-color:#E8A0B8;color:#0A0A0A;font-weight:600}
+@media (min-width:961px){
+  .tabs-wrap{top:62px}
+}
 .menu-card{background:#101010;border:1px solid rgba(212,175,55,.4);outline:1px solid rgba(212,175,55,.18);outline-offset:4px;padding:1.6rem 1.2rem;margin:1.2rem 0;position:relative}
 .menu-card::before,.menu-card::after{content:"";position:absolute;width:14px;height:14px;border:1px solid rgba(212,175,55,.6)}
 .menu-card::before{top:6px;left:6px;border-right:none;border-bottom:none}

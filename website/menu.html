@@ -40,18 +40,20 @@
   <div class="menu-hero">
     <h1>Menu</h1>
     <div class="rule rule-center" aria-hidden="true"><span></span><i>✦</i><span></span></div>
-    <p class="menu-note">Transcribed from the printed boards. Prices in Naira.</p>
   </div>
 
-  <div class="tabs" role="tablist" aria-label="Menu categories">
-    <button role="tab" data-tab="food" aria-selected="false">Food</button>
-    <button role="tab" data-tab="sushi" aria-selected="false">Sushi</button>
-    <button role="tab" data-tab="pizza-pasta" aria-selected="false">Pizza and Pasta</button>
-    <button role="tab" data-tab="cocktails" aria-selected="false">Cocktails</button>
-    <button role="tab" data-tab="wine-spirits" aria-selected="true" class="active">Wine and Spirits</button>
-    <button role="tab" data-tab="soft" aria-selected="false">Soft Drinks</button>
-    <button role="tab" data-tab="cigars" aria-selected="false">Cigars</button>
-    <button role="tab" data-tab="dessert" aria-selected="false">Dessert</button>
+  <div class="tabs-wrap">
+    <p class="tabs-label">Browse by category</p>
+    <div class="tabs" role="tablist" aria-label="Menu categories">
+      <button role="tab" data-tab="food" aria-selected="true" class="active">Food</button>
+      <button role="tab" data-tab="sushi" aria-selected="false">Sushi</button>
+      <button role="tab" data-tab="pizza-pasta" aria-selected="false">Pizza and Pasta</button>
+      <button role="tab" data-tab="cocktails" aria-selected="false">Cocktails</button>
+      <button role="tab" data-tab="wine-spirits" aria-selected="false">Wine and Spirits</button>
+      <button role="tab" data-tab="soft" aria-selected="false">Soft Drinks</button>
+      <button role="tab" data-tab="cigars" aria-selected="false">Cigars</button>
+      <button role="tab" data-tab="dessert" aria-selected="false">Dessert</button>
+    </div>
   </div>
 
   <div class="menu-tools">
@@ -67,8 +69,8 @@
   <p class="menu-count" id="menu-count" role="status" aria-live="polite"></p>
 
   <div id="menu-list">
-    <!-- WINE & SPIRITS (default visible, mirrors menu.png mockup) -->
-    <section class="menu-card" data-cat="wine-spirits" aria-label="Wine and spirits">
+    <!-- WINE & SPIRITS -->
+    <section class="menu-card" data-cat="wine-spirits" hidden aria-label="Wine and spirits">
       <h2><span aria-hidden="true">✦</span> Irish Cream <span aria-hidden="true">✦</span></h2>
       <ul>
         <li><span class="item">Baileys Bottle</span><span class="dots" aria-hidden="true"></span><span class="price">N86,000</span></li>
@@ -88,7 +90,7 @@
       </ul>
     </section>
 
-    <section class="menu-card menu-card-green" data-cat="wine-spirits" aria-label="Wine">
+    <section class="menu-card menu-card-green" data-cat="wine-spirits" hidden aria-label="Wine">
       <h2><span aria-hidden="true">✦</span> Wine <span aria-hidden="true">✦</span></h2>
       <h3>Rose Wine</h3>
       <ul>
@@ -126,7 +128,7 @@
       </ul>
     </section>
 
-    <section class="menu-card" data-cat="wine-spirits" aria-label="Champagne and rose">
+    <section class="menu-card" data-cat="wine-spirits" hidden aria-label="Champagne and rose">
       <h2><span aria-hidden="true">✦</span> Champagne <span aria-hidden="true">✦</span></h2>
       <ul>
         <li><span class="item">Dom Perignon Brut</span><span class="dots" aria-hidden="true"></span><span class="price">N920,000</span></li>
@@ -150,7 +152,7 @@
       </ul>
     </section>
 
-    <section class="menu-card" data-cat="wine-spirits" aria-label="Whiskey Cognac Tequila Shots">
+    <section class="menu-card" data-cat="wine-spirits" hidden aria-label="Whiskey Cognac Tequila Shots">
       <h2><span aria-hidden="true">✦</span> Single Malt Whiskey <span aria-hidden="true">✦</span></h2>
       <ul>
         <li><span class="item">Glenfiddich 30 Years</span><span class="dots" aria-hidden="true"></span><span class="price">N3,800,000</span></li>
@@ -215,7 +217,7 @@
     </section>
 
     <!-- FOOD -->
-    <section class="menu-card" data-cat="food" hidden aria-label="Breakfast and starters">
+    <section class="menu-card" data-cat="food" aria-label="Breakfast and starters">
       <h2><span aria-hidden="true">✦</span> Choice of Breakfast <span aria-hidden="true">✦</span></h2>
       <ul>
         <li><span class="item">English Breakfast <small>Eggs, sausage, bacon, beans, mushrooms, tomato, toast</small></span><span class="dots" aria-hidden="true"></span><span class="price">N18k</span></li>
@@ -250,7 +252,7 @@
       </ul>
     </section>
 
-    <section class="menu-card menu-card-green" data-cat="food" hidden aria-label="Mains">
+    <section class="menu-card menu-card-green" data-cat="food" aria-label="Mains">
       <h2><span aria-hidden="true">✦</span> Main Course <span aria-hidden="true">✦</span></h2>
       <ul>
         <li><span class="item">Japanese Surf and Turf Teppanyaki</span><span class="dots" aria-hidden="true"></span><span class="price">N70,000</span></li>
@@ -518,7 +520,7 @@ const searchInput = document.getElementById('menu-search');
 const sortSelect = document.getElementById('menu-sort');
 const countNote = document.getElementById('menu-count');
 const emptyNote = document.getElementById('menu-empty');
-let activeCat = 'wine-spirits';
+let activeCat = 'food';
 
 function priceValue(text) {
   const m = String(text).replace(/,/g, '').match(/([\d.]+)\s*([kK]?)/);
